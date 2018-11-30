@@ -238,11 +238,12 @@ class RespectfulRequester:
 
     @staticmethod
     def _validate_request_func(request_func):
-        request_func_string = inspect.getsource(request_func)
-        post_lambda_string = request_func_string.split(":")[1].strip()
+	return
+        #request_func_string = inspect.getsource(request_func)
+        #post_lambda_string = request_func_string.split(":")[1].strip()
 
-        if not post_lambda_string.startswith(config["requests_module_name"]) and not post_lambda_string.startswith("getattr(requests"):
-            raise RequestsRespectfulError("The request lambda can only contain a requests function call")
+        #if not post_lambda_string.startswith(config["requests_module_name"]) and not post_lambda_string.startswith("getattr(requests"):
+        #    raise RequestsRespectfulError("The request lambda can only contain a requests function call")
 
     @staticmethod
     def _config():
